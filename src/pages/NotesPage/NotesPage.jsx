@@ -9,7 +9,7 @@ export default function NotesPage({notes}) {
   return (
     <>
       <h1>Notes</h1>
-      {notes.length===0 ?
+      {notes.length === 0 ?
       <p>No Notes Yet!</p>
       :
       <div>
