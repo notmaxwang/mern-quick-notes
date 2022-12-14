@@ -3,12 +3,12 @@ const Note = require('../../models/note');
 module.exports = {
   index, 
   create,
-}
+};
 
 async function create(req, res) {
   try{
-    req.body.user = req.user._id;
     const note = await Note.create(req.body);
+    note.user = req.user._id;
     note.save();
     res.json(note);
   } catch(err) {

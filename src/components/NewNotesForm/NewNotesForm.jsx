@@ -10,6 +10,7 @@ export default function NewNoteForm({addNote}) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
+    console.log(note);
     addNote(note);
     setNote({
       text:'',
